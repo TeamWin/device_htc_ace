@@ -27,7 +27,6 @@ adb pull /system/bin/lsc_camera ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/A1026_CFG.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AdieHWCodec.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AdieHWCodec_WA.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/agps_rm ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AIC3254_REG.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AIC3254_REG_DualMic.csv ../../../vendor/htc/$DEVICE/proprietary
@@ -46,14 +45,12 @@ adb pull /system/lib/libaudio.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libaudioalsa.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libaudioeq.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libganril.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libgemini.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libloc_api-rpc.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libloc_api.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libkineto.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libmmipl.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libmmjpeg.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary
@@ -63,7 +60,6 @@ adb pull /system/lib/libomx_wmvdec_sharedlibrary.so ../../../vendor/htc/$DEVICE/
 adb pull /system/lib/libpvasfcommon.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasflocalpbreg.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/libpvasflocalpb.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/librilswitch.so ../../../vendor/htc/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -94,7 +90,6 @@ PRODUCT_COPY_FILES += \\
 PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/A1026_CFG.csv:/system/etc/A1026_CFG.csv \\
     vendor/htc/__DEVICE__/proprietary/AdieHWCodec.csv:/system/etc/AdieHWCodec.csv \\
-    vendor/htc/__DEVICE__/proprietary/AdieHWCodec_WA.csv:/system/etc/AdieHWCodec_WA.csv \\
     vendor/htc/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
     vendor/htc/__DEVICE__/proprietary/AIC3254_REG.csv:/system/etc/AIC3254_REG.csv \\
     vendor/htc/__DEVICE__/proprietary/AIC3254_REG_DualMic.csv:/system/etc/AIC3254_REG_DualMic.csv \\
@@ -114,7 +109,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libaudioeq.so:/system/lib/libaudioeq.so \\
     vendor/htc/__DEVICE__/proprietary/libcamera.so:/system/lib/libcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/libganril.so:/system/lib/libganril.so \\
     vendor/htc/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
@@ -123,7 +117,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
     vendor/htc/__DEVICE__/proprietary/libloc_api-rpc.so:/system/lib/libloc_api-rpc.so \\
     vendor/htc/__DEVICE__/proprietary/libloc_api.so:/system/lib/libloc_api.so \\
-    vendor/htc/__DEVICE__/proprietary/libkineto.so:/system/lib/libkineto.so \\
     vendor/htc/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
     vendor/htc/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
@@ -134,7 +127,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libpvasflocalpbreg.so:/system/lib/libpvasflocalpbreg.so \\
     vendor/htc/__DEVICE__/proprietary/libpvasflocalpb.so:/system/lib/libpvasflocalpb.so \\
     vendor/htc/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/librilswitch.so:/system/lib/librilswitch.so \\
     vendor/htc/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
     vendor/htc/__DEVICE__/proprietary/lsc_camera:/system/bin/lsc_camera \\
     vendor/htc/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage
