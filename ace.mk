@@ -61,6 +61,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/ace/media_profiles.xml:system/etc/media_profiles.xml
 
+# gsm config xml file
+PRODUCT_COPY_FILES += \
+    device/htc/ace/spn-conf.xml:system/etc/spn-conf.xml \
+    device/htc/ace/voicemail-conf.xml:system/etc/voicemail-conf.xml
+
 PRODUCT_PACKAGES += \
     librs_jni \
     lights.ace \
