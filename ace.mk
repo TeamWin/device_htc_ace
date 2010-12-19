@@ -68,8 +68,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    lights.ace \
-    sensors.ace
+    lights.spade \
+    sensors.spade
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

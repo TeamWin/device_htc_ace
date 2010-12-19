@@ -18,7 +18,7 @@ ifneq ($(TARGET_SIMULATOR),true)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := lights.ace
+LOCAL_MODULE := lights.spade
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
