@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/ace/init.spade.rc:root/init.spade.rc \
-    device/htc/ace/vold.fstab:system/etc/vold.fstab
+    device/htc/ace/ueventd.spade.rc:root/ueventd.spade.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
@@ -135,6 +135,9 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # ace uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
+
+PRODUCT_COPY_FILES += \
+    device/htc/ace/vold.fstab:system/etc/vold.fstab
 
 # Kernel modules
 #PRODUCT_COPY_FILES += \
