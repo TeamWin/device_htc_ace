@@ -70,7 +70,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librs_jni \
     lights.spade \
-    sensors.spade
+    sensors.spade \
+    gralloc.msm7x30 \
+    overlay.default \
+    gps.spade \
+    libOmxCore \
+    libOmxVenc \
+    libOmxVdec
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
