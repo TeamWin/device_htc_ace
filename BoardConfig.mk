@@ -37,7 +37,7 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 
-TARGET_BOOTLOADER_BOARD_NAME := ace
+TARGET_BOOTLOADER_BOARD_NAME := spade
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
@@ -60,6 +60,8 @@ BOARD_KERNEL_PAGE_SIZE := 4096
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
+
 BOARD_EGL_CFG := device/htc/ace/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
@@ -75,11 +77,11 @@ BOARD_USE_BROADCOM_FM_VOLUME_HACK := true
 
 BOARD_USE_FROYO_LIBCAMERA := true
 
-# Use RGB565 surfaces until userspace drivers are upgraded
-BOARD_NO_RGBX_8888 := true
-
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := spade
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
+
+# Use RGB565 surfaces until userspace drivers are upgraded
+BOARD_NO_RGBX_8888 := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -105,6 +107,5 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
