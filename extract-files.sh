@@ -25,7 +25,6 @@ adb pull /system/bin/htc_ebdlogd ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/logcat2 ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/lsc_camera ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/A1026_CFG.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AdieHWCodec.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/agps_rm ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AIC3254_REG.csv ../../../vendor/htc/$DEVICE/proprietary
@@ -77,7 +76,6 @@ PRODUCT_COPY_FILES += \\
 
 # All the blobs necessary for ace
 PRODUCT_COPY_FILES += \\
-    vendor/htc/__DEVICE__/proprietary/A1026_CFG.csv:/system/etc/A1026_CFG.csv \\
     vendor/htc/__DEVICE__/proprietary/AdieHWCodec.csv:/system/etc/AdieHWCodec.csv \\
     vendor/htc/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
     vendor/htc/__DEVICE__/proprietary/AIC3254_REG.csv:/system/etc/AIC3254_REG.csv \\
