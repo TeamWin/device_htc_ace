@@ -38,7 +38,7 @@ $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-htc \
     ro.com.google.networklocation=1 \
-    ro.com.google.gmsversion=2.2_r7 \
+    ro.com.google.gmsversion=2.2_r8 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y
