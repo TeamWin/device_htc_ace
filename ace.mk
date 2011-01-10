@@ -157,29 +157,29 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/bcm4329.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/arch/arm/mach-msm/dal_remotetest.ko:system/lib/modules/2.6.32.27-cyanogenmod/kernel/arch/arm/mach-msm/dal_remotetest.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/crypto/ansi_cprng.ko:system/lib/modules/2.6.32.27-cyanogenmod/kernel/crypto/ansi_cprng.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/drivers/input/evbug.ko:system/lib/modules/2.6.32.27-cyanogenmod/kernel/drivers/input/evbug.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.32.27-cyanogenmod/kernel/fs/cifs/cifs.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/kernel/fs/nls/nls_utf8.ko:system/lib/modules/2.6.32.27-cyanogenmod/kernel/fs/nls/nls_utf8.ko \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.alias:system/lib/modules/2.6.32.27-cyanogenmod/modules.alias \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.alias.bin:system/lib/modules/2.6.32.27-cyanogenmod/modules.alias.bin \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.ccwmap:system/lib/modules/2.6.32.27-cyanogenmod/modules.ccwmap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.dep:system/lib/modules/2.6.32.27-cyanogenmod/modules.dep \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.dep.bin:system/lib/modules/2.6.32.27-cyanogenmod/modules.dep.bin \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.devname:system/lib/modules/2.6.32.27-cyanogenmod/modules.devname \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.ieee1394map:system/lib/modules/2.6.32.27-cyanogenmod/modules.ieee1394map \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.inputmap:system/lib/modules/2.6.32.27-cyanogenmod/modules.inputmap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.isapnpmap:system/lib/modules/2.6.32.27-cyanogenmod/modules.isapnpmap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.ofmap:system/lib/modules/2.6.32.27-cyanogenmod/modules.ofmap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.order:system/lib/modules/2.6.32.27-cyanogenmod/modules.order \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.pcimap:system/lib/modules/2.6.32.27-cyanogenmod/modules.pcimap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.seriomap:system/lib/modules/2.6.32.27-cyanogenmod/modules.seriomap \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.softdep:system/lib/modules/2.6.32.27-cyanogenmod/modules.softdep \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.symbols:system/lib/modules/2.6.32.27-cyanogenmod/modules.symbols \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.32.27-cyanogenmod/modules.symbols.bin \
-    device/htc/ace/modules/2.6.32.27-cyanogenmod/modules.usbmap:system/lib/modules/2.6.32.27-cyanogenmod/modules.usbmap
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/drivers/net/wireless/bcm4329/bcm4329.ko:system/lib/modules/bcm4329.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/arch/arm/mach-msm/dal_remotetest.ko:system/lib/modules/2.6.32.28-cyanogenmod/kernel/arch/arm/mach-msm/dal_remotetest.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/crypto/ansi_cprng.ko:system/lib/modules/2.6.32.28-cyanogenmod/kernel/crypto/ansi_cprng.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/drivers/input/evbug.ko:system/lib/modules/2.6.32.28-cyanogenmod/kernel/drivers/input/evbug.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/fs/cifs/cifs.ko:system/lib/modules/2.6.32.28-cyanogenmod/kernel/fs/cifs/cifs.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/kernel/fs/nls/nls_utf8.ko:system/lib/modules/2.6.32.28-cyanogenmod/kernel/fs/nls/nls_utf8.ko \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.alias:system/lib/modules/2.6.32.28-cyanogenmod/modules.alias \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.alias.bin:system/lib/modules/2.6.32.28-cyanogenmod/modules.alias.bin \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.ccwmap:system/lib/modules/2.6.32.28-cyanogenmod/modules.ccwmap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.dep:system/lib/modules/2.6.32.28-cyanogenmod/modules.dep \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.dep.bin:system/lib/modules/2.6.32.28-cyanogenmod/modules.dep.bin \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.devname:system/lib/modules/2.6.32.28-cyanogenmod/modules.devname \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.ieee1394map:system/lib/modules/2.6.32.28-cyanogenmod/modules.ieee1394map \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.inputmap:system/lib/modules/2.6.32.28-cyanogenmod/modules.inputmap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.isapnpmap:system/lib/modules/2.6.32.28-cyanogenmod/modules.isapnpmap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.ofmap:system/lib/modules/2.6.32.28-cyanogenmod/modules.ofmap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.order:system/lib/modules/2.6.32.28-cyanogenmod/modules.order \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.pcimap:system/lib/modules/2.6.32.28-cyanogenmod/modules.pcimap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.seriomap:system/lib/modules/2.6.32.28-cyanogenmod/modules.seriomap \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.softdep:system/lib/modules/2.6.32.28-cyanogenmod/modules.softdep \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.symbols:system/lib/modules/2.6.32.28-cyanogenmod/modules.symbols \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.symbols.bin:system/lib/modules/2.6.32.28-cyanogenmod/modules.symbols.bin \
+    device/htc/ace/modules/2.6.32.28-cyanogenmod/modules.usbmap:system/lib/modules/2.6.32.28-cyanogenmod/modules.usbmap
 
 $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
 
