@@ -1,6 +1,0 @@
-kernel/arch/arm/mach-msm/dal_remotetest.ko
-kernel/fs/nls/nls_utf8.ko
-kernel/fs/cifs/cifs.ko
-kernel/crypto/ansi_cprng.ko
-kernel/drivers/net/wireless/bcm4329/bcm4329.ko
-kernel/drivers/input/evbug.ko
