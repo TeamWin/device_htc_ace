@@ -25,15 +25,8 @@ adb pull /system/bin/htc_ebdlogd ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/logcat2 ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/lsc_camera ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/rmt_storage ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AdieHWCodec.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/agps_rm ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AIC3254_REG.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AIC3254_REG_DualMic.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/CodecDSPID.txt ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/HP_Audio.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/HP_Video.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/SPK_Combination.csv ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/etc/vpimg ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
@@ -84,15 +77,8 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
     vendor/htc/__DEVICE__/proprietary/lsc_camera:/system/bin/lsc_camera \\
     vendor/htc/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
-    vendor/htc/__DEVICE__/proprietary/AdieHWCodec.csv:/system/etc/AdieHWCodec.csv \\
     vendor/htc/__DEVICE__/proprietary/agps_rm:/system/etc/agps_rm \\
-    vendor/htc/__DEVICE__/proprietary/AIC3254_REG.csv:/system/etc/AIC3254_REG.csv \\
-    vendor/htc/__DEVICE__/proprietary/AIC3254_REG_DualMic.csv:/system/etc/AIC3254_REG_DualMic.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
-    vendor/htc/__DEVICE__/proprietary/CodecDSPID.txt:/system/etc/CodecDSPID.txt \\
-    vendor/htc/__DEVICE__/proprietary/HP_Audio.csv:/system/etc/HP_Audio.csv \\
-    vendor/htc/__DEVICE__/proprietary/HP_Video.csv:/system/etc/HP_Video.csv \\
-    vendor/htc/__DEVICE__/proprietary/SPK_Combination.csv:/system/etc/SPK_Combination.csv \\
     vendor/htc/__DEVICE__/proprietary/vpimg:/system/etc/vpimg \\
     vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
     vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
