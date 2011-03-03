@@ -18,10 +18,31 @@ on fs
     mkdir /data/d 0777 system system
     mount debugfs /data/d /data/d
 
-    chown system system /sys/module/serial/parameters/modem_enabled
-    chown system system /dev/ttyHSUSB0
-    chown system system /dev/ttySA0
-    chown system system /dev/smd9
+    chmod 0664 /sys/module/gpio_event/parameters/phone_call_status
+    chown radio system /sys/module/gpio_event/parameters/phone_call_status
+
+    chmod 0640 /sys/camera_led_status/led_ril_status
+    chown radio system /sys/camera_led_status/led_ril_status
+
+    chmod 0664 /sys/module/pm/parameters/idle_sleep_mode
+
+    # for disabling IPv6 over mobile network.
+    write /proc/sys/net/ipv6/conf/rmnet0/disable_ipv6 1
+    write /proc/sys/net/ipv6/conf/rmnet1/disable_ipv6 1
+    write /proc/sys/net/ipv6/conf/rmnet2/disable_ipv6 1
+
+    # for Flip to speaker
+    chown radio radio /sys/class/htc_accelerometer/accelerometer/PhoneOnOffFlag
+    chown radio radio /sys/class/htc_ecompass/ecompass/PhoneOnOffFlag
+
+    # for Optical sensors
+    chown system system /sys/class/optical_sensors/lightsensor/ls_adc
+    chown system system /sys/class/optical_sensors/lightsensor/ls_auto
+    chown system system /sys/class/optical_sensors/lightsensor/ls_kadc
+    chown system radio  /sys/class/optical_sensors/proximity/ps_adc
+    chown system system /sys/class/optical_sensors/proximity/ps_kadc
+    chown system system /sys/class/optical_sensors/proximity/ps_led
+    chown system system /sys/class/optical_sensors/proximity/ps_test_mode
 
     # bluetooth power up/down interface
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
@@ -43,10 +64,6 @@ on fs
     chown system system /sys/class/leds/flashlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/keyboard-backlight/brightness
-
-    # Radio_feedback permissions
-    chown radio radio /dev/radio_feedback
-    chmod 0660 /dev/radio_feedback
 
 # Load kineto_gan.ko while booting
 #    insmod /system/lib/modules/kineto_gan.ko
@@ -81,7 +98,7 @@ service akmd /system/bin/akmd
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
     oneshot
-    keycodes 115 272
+    keycodes 114 115
 
 service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     --baudrate 3000000 --patchram /etc/firmware/bcm4329.hcd /dev/ttyHS0
@@ -107,12 +124,12 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmc
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root
-        disabled
+    disabled
     oneshot
 
 service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
     user root
-        disabled
+    disabled
     oneshot
 
 on property:ro.build.tags=test-keys
