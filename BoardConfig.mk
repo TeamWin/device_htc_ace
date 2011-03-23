@@ -80,7 +80,7 @@ BOARD_USE_FROYO_LIBCAMERA := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := spade
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
-# Use RGB565 surfaces until userspace drivers are upgraded
+# Current drivers don't support new EGL config
 BOARD_NO_RGBX_8888 := true
 
 # cat /proc/emmc
