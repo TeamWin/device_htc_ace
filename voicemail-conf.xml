@@ -276,4 +276,10 @@
         vmnumber="+46735333333"
         vmtag="Voicemail" />
 
+    <voicemail
+        numeric="20820"
+        carrier="Bouygues (France)"
+        vmnumber="660"
+        vmtag="Voicemail" />
+
 </voicemail>
