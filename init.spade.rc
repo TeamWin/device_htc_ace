@@ -112,14 +112,6 @@ service udhcpd /system/bin/udhcpd
     disabled
     oneshot
 
-service netsharing_on /system/bin/netsharing net on
-    disabled
-    oneshot
-
-service netsharing_off /system/bin/netsharing net off
-    disabled
-    oneshot
-
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     user root
     disabled
