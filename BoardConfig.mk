@@ -67,6 +67,7 @@ BOARD_EGL_CFG := device/htc/ace/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 BOARD_USE_QCOM_PMEM := true
+BOARD_USES_QCOM_GPS := true
 
 BOARD_CAMERA_USE_GETBUFFERINFO := true
 
