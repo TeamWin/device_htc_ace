@@ -22,7 +22,7 @@ ro.ril.enable.sdr=1
 ro.ril.enable.amr.wideband=0
 
 # ace RF team request
-ro.ril.enable.dtm=1
+ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
@@ -51,4 +51,4 @@ ro.ril.def.agps.mode=2
 ro.ril.disable.power.collapse=1
 
 # For Ace China NEL
-ro.ril.enable.prl.recognition=1
+ro.ril.update.org.acoustic=1
