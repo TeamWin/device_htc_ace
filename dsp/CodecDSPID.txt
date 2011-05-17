@@ -1,5 +1,8 @@
-DualMic_Phone,/system/etc/soundimage/Sound_Dualmic.txt
+Original_Phone_REC,/system/etc/soundimage/Sound_Dualmic.txt
+Original_Phone_SPK,/system/etc/soundimage/Sound_Dualmic.txt
+Original_Phone,/system/etc/soundimage/Sound_Dualmic.txt
 Original,/system/etc/soundimage/Sound_Original.txt
+Original_SPK,/system/etc/soundimage/Sound_Original_SPK.txt
 dolby_a_spk,/system/etc/soundimage/Sound_Dolby_A_SPK.txt
 dolby_a_hp,/system/etc/soundimage/Sound_Dolby_A_HP.txt
 dolby_v_spk,/system/etc/soundimage/Sound_Dolby_V_SPK.txt

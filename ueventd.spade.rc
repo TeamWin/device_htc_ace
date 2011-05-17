@@ -16,6 +16,7 @@
 /dev/msm_acdb           0660    system      audio
 /dev/msm_pcm_lp_dec     0660    system      audio
 /dev/codec_aic3254      0660    system      audio
+/dev/pmem_audio         0660    system      audio
 
 /dev/radio_feedback     0660    radio       radio
 /dev/smd9               0600    system      system

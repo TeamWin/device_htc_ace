@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2009 The Android Open Source Project
+# Copyright (C) 2011 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,7 @@
 # limitations under the License.
 #
 
-#
-# This is the product configuration for a generic GSM,
-# not specialized for any geography.
-#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
@@ -35,30 +32,17 @@ $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-htc \
+    ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
-    ro.com.google.gmsversion=2.2_r8 \
+    ro.com.google.gmsversion=2.3_r3 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
 DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/base/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
-
-# media config xml file
-PRODUCT_COPY_FILES += \
-    device/htc/ace/media_profiles.xml:system/etc/media_profiles.xml
 
 # gsm config xml file
 PRODUCT_COPY_FILES += \
@@ -66,15 +50,9 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
 PRODUCT_PACKAGES += \
-    librs_jni \
     lights.spade \
     sensors.spade \
-    gralloc.msm7x30 \
-    overlay.default \
-    gps.spade \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec
+    gps.spade
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -84,7 +62,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/ace/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/ace/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/ace/keylayout/spade-keypad-v0.kl:system/usr/keylayout/spade-keypad-v0.kl \
     device/htc/ace/keylayout/spade-keypad.kl:system/usr/keylayout/spade-keypad.kl
 
 # Firmware
@@ -106,7 +83,7 @@ PRODUCT_COPY_FILES += \
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
     device/htc/ace/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
-    device/htc/ace/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
+    device/htc/ace/dsp/AIC3254_REG_XD.csv:system/etc/AIC3254_REG_XD.csv \
     device/htc/ace/dsp/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
     device/htc/ace/dsp/CodecDSPID.txt:system/etc/CodecDSPID.txt \
     device/htc/ace/dsp/HP_Audio.csv:system/etc/HP_Audio.csv \
@@ -118,8 +95,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/dsp/soundimage/Sound_Country.txt:system/etc/soundimage/Sound_Country.txt \
     device/htc/ace/dsp/soundimage/Sound_Dolby_A_HP.txt:system/etc/soundimage/Sound_Dolby_A_HP.txt \
     device/htc/ace/dsp/soundimage/Sound_Dolby_A_SPK.txt:system/etc/soundimage/Sound_Dolby_A_SPK.txt \
-    device/htc/ace/dsp/soundimage/Sound_Dolby_HP.txt:system/etc/soundimage/Sound_Dolby_HP.txt \
-    device/htc/ace/dsp/soundimage/Sound_Dolby_Spk.txt:system/etc/soundimage/Sound_Dolby_Spk.txt \
     device/htc/ace/dsp/soundimage/Sound_Dolby_V_HP.txt:system/etc/soundimage/Sound_Dolby_V_HP.txt \
     device/htc/ace/dsp/soundimage/Sound_Dolby_V_SPK.txt:system/etc/soundimage/Sound_Dolby_V_SPK.txt \
     device/htc/ace/dsp/soundimage/Sound_Dualmic.txt:system/etc/soundimage/Sound_Dualmic.txt \
@@ -129,6 +104,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/dsp/soundimage/Sound_Latin.txt:system/etc/soundimage/Sound_Latin.txt \
     device/htc/ace/dsp/soundimage/Sound_New_Age.txt:system/etc/soundimage/Sound_New_Age.txt \
     device/htc/ace/dsp/soundimage/Sound_Original.txt:system/etc/soundimage/Sound_Original.txt \
+    device/htc/ace/dsp/soundimage/Sound_Original_SPK.txt:system/etc/soundimage/Sound_Original_SPK.txt \
     device/htc/ace/dsp/soundimage/Sound_Piano.txt:system/etc/soundimage/Sound_Piano.txt \
     device/htc/ace/dsp/soundimage/Sound_Pop.txt:system/etc/soundimage/Sound_Pop.txt \
     device/htc/ace/dsp/soundimage/Sound_R_B.txt:system/etc/soundimage/Sound_R_B.txt \
@@ -173,12 +149,6 @@ PRODUCT_COPY_FILES += \
 
 # Alternate NAM gps.conf to NAM package
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/nam/gps.conf
-    
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# ace uses high-density artwork where available
-PRODUCT_LOCALES += hdpi
 
 PRODUCT_COPY_FILES += \
     device/htc/ace/vold.fstab:system/etc/vold.fstab
@@ -199,6 +169,9 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/bcm4329.ko:system/lib/modules/bcm4329.ko
 
 $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
+
+# common msm7x30 configs
+$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/ace/media_a1026.mk)
