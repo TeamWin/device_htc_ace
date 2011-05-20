@@ -20,30 +20,30 @@ DEVICE=ace
 MANUFACTURER=htc
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/akmd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 chmod 755 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd
-adb pull /system/bin/awb_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/bma150_usr ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/htc_ebdlogd ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/logcat2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/lsc_camera ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/rmt_storage ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/bin/snd3254 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/etc/AudioBTID.csv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/egl/libq3dtools_adreno200.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libaudio.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libaudioalsa.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libgemini.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libgsl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libhtc_acoustic.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libhtc_ril.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libmmipl.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/libmmjpeg.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /system/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/awb_camera -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/bma150_usr -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/htc_ebdlogd -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/logcat2 -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/lsc_camera -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/rmt_storage -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/snd3254 -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/etc/AudioBTID.csv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libEGL_adreno200.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLESv1_CM_adreno200.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libGLESv2_adreno200.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/egl/libq3dtools_adreno200.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudio.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libaudioalsa.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libcamera.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgemini.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libgsl.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhtc_acoustic.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libhtc_ril.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmipl.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/libmmjpeg.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip system/lib/liboemcamera.so -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -60,7 +60,7 @@ adb pull /system/lib/liboemcamera.so ../../../vendor/$MANUFACTURER/$DEVICE/propr
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This file is generated by device/__MANUFACTURER__/__DEVICE__/extract-files.sh - DO NOT EDIT
+# This file is generated by device/__MANUFACTURER__/__DEVICE__/unzip-files.sh - DO NOT EDIT
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
