@@ -72,10 +72,7 @@ on fs
     write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
     write /sys/block/mmcblk1/bdi/read_ahead_kb 1024
 
-# Load kineto_gan.ko while booting
-#    insmod /system/lib/modules/kineto_gan.ko
-
-# Enable low memory killer to check file pages
+    # Enable low memory killer to check file pages
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
@@ -119,7 +116,6 @@ service udhcpd /system/bin/udhcpd
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     user root
-    disabled
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root
@@ -136,6 +132,3 @@ on property:ro.build.tags=test-keys
 
 on property:ro.build.tags=release-keys
     start htc_ebdlogd_rel
-
-on property:ro.emmc=1
-    start rmt_storage
