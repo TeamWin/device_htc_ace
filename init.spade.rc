@@ -42,6 +42,7 @@ on fs
     chown system system /sys/class/optical_sensors/lightsensor/ls_kadc
     chown system radio  /sys/class/optical_sensors/proximity/ps_adc
     chown system system /sys/class/optical_sensors/proximity/ps_kadc
+    chmod 0666 /sys/class/optical_sensors/proximity/ps_kadc
     chown system system /sys/class/optical_sensors/proximity/ps_led
     chown system system /sys/class/optical_sensors/proximity/ps_test_mode
 
