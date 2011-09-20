@@ -118,7 +118,9 @@ PRODUCT_COPY_FILES += \
 
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
-    device/htc/ace/nam/CodecDSPID.txt:system/etc/nam/CodecDSPID.txt \
+    device/htc/ace/nam/AdieHWCodec.csv:system/etc/nam/AdieHWCodec.csv \
+    device/htc/ace/nam/AIC3254_REG_DualMic_MCLK.csv:system/etc/nam/AIC3254_REG_DualMic_MCLK.csv \
+    device/htc/ace/nam/CodecDSPID_MCLK.txt:system/etc/nam/CodecDSPID_MCLK.txt \
     device/htc/ace/nam/Sound_Treble_Booster_MCLK.txt:system/etc/nam/Sound_Treble_Booster_MCLK.txt \
     device/htc/ace/nam/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/Sound_Vocal_Booster_MCLK.txt \
     device/htc/ace/nam/Sound_SRS_A_SPK_MCLK.txt:system/etc/nam/Sound_SRS_A_SPK_MCLK.txt \

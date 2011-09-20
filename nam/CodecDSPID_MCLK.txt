@@ -23,4 +23,3 @@ R&B,/system/etc/soundimage/Sound_R_B_MCLK.txt
 Rock,/system/etc/soundimage/Sound_Rock_MCLK.txt
 Treble Booster,/system/etc/soundimage/Sound_Treble_Booster_MCLK.txt
 Vocal Booster,/system/etc/soundimage/Sound_Vocal_Booster_MCLK.txt
-Recording,/system/etc/soundimage/Sound_Original_MCLK.txt
